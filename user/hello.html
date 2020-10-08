@@ -1,0 +1,171 @@
+<!-- main page: control -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Song</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/user/hello.css" />
+
+    <link
+      href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans&sidebar.open"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <!-- https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_createelement4 -->
+    <!-- https://www.w3schools.com/icons/fontawesome5_icons_chat.asp -->
+
+    <header>
+      <i
+        class="fas fa-comment-alt"
+        style="font-size: 24px; color: white"
+        id="comment-icon"
+      ></i>
+
+      <!-- https://www.w3schools.com/icons/tryit.asp?icon=fas_fa-pen&unicon=f304 -->
+      <i
+        class="fas fa-pen"
+        style="font-size: 30px; color: #535353"
+        id="pen-icon"
+      >
+      </i>
+
+      <!-- Trigger/Open The Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <p id="modaltext">enter a new chat room name below:</p>
+          <p id="room-name" contenteditable="true">xxx</p>
+          <p id="change">change</p>
+        </div>
+      </div>
+
+      <div id="space">
+        <a
+          id="button"
+          class="host"
+          href="mailto:email@example.com?subject=Invite you to Songs with Friends Chat Room&body=https://songs-with-friends.glitch.me/"
+          >invite</a
+        >
+
+        <!-- The Modal -->
+      </div>
+
+      <!-- https://www.w3schools.com/icons/tryit.asp?icon=far_fa-comment-alt&unicon=f27a -->
+    </header>
+
+    <main>
+      <div id="text" class="text-header">
+        Press the pen change the name of room!
+      </div>
+      <div class="playlist">
+        <!-- https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-plus -->
+        <div id="list-of-song-to-play"></div>
+        <!-- pop-up/overlay -->
+        <div id="overlay" class="close">
+          <div class="popup-box">
+            <div id="search-title">Add Songs to Queue</div>
+
+            <div id="search-box">
+              <input
+                required
+                type="text"
+                maxlength="100"
+                id="searchTxt"
+                placeholder="Search by title, artist, or album"
+              />
+              <but id="search-but">Search</but>
+            </div>
+
+            <div id="search-result">
+              <div id="no-result">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <div>No results to show...yet</div>
+              </div>
+            </div>
+          </div>
+          <span id="close1">&times;</span>
+        </div>
+
+        <i
+          class="fa fa-plus"
+          style="font-size: 50px; color: white"
+          id="plus-icon"
+          onclick="addSong()"
+        ></i>
+      </div>
+    </main>
+
+    <footer>
+      <div class="left">
+        <div class="current">Currently Playing:</div>
+        <div class="voice-icon">
+          <!-- https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-volume-up -->
+          <i
+            class="fa fa-volume-up"
+            style="font-size: 30px; color: #b3b3b3"
+            id="up-icon"
+          ></i>
+          <!-- https://www.w3schools.com/icons/tryit.asp?icon=fas_fa-volume-mute&unicon=f6a9 -->
+          <i
+            class="fas fa-volume-mute"
+            style="font-size: 30px; color: #b3b3b3"
+            id="mute-icon"
+          ></i>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="name-infro"></div>
+
+        <div id="time-infor">
+          <time id="progress-time"> --:-- </time>
+          <div id="my-progress">
+            <div id="my-bar"></div>
+          </div>
+          <time id="duration-time"> --:-- </time>
+        </div>
+      </div>
+      <div class="right">
+        <i
+          class="fas fa-comment-alt"
+          style="font-size: 30px; color: white"
+          id="comment-footer-icon"
+        ></i>
+
+        <div class="chat-box">
+          <div class="chat-header">
+            <div class="chat">Chat</div>
+            <i
+              class="fa fa-times"
+              style="font-size: 18px; color: white"
+              id="times-icon"
+            ></i>
+          </div>
+          <div class="chat-main">
+            <div class="box">
+              <div class="chat-message"></div>
+            </div>
+          </div>
+
+          <div class="chat-footer">
+            <div class="chat-input">
+              <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_textarea2 -->
+              <textarea class="input-text"></textarea>
+              <i class="fas fa-location-arrow" id="arrow-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="/user/hello.js"></script>
+    </footer>
+  </body>
+</html>

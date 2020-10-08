@@ -1,0 +1,614 @@
+html {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  margin-left: 40%;
+  margin-top: 4%;
+  width: 200%;
+  text-align: center;
+}
+
+.text-header {
+  margin: 2% 30%;
+  font-size: 60px;
+  color: #1db954;
+  text-align: center;
+}
+.name-infro {
+  font-size: 15px;
+  margin: 2% 2%;
+  height: 10%;
+}
+
+#pen-icon {
+  color: #535353;
+  font-size: 20px;
+  margin-left: 48%;
+  margin-top: 4%;
+  flex-basis: 180%;
+}
+
+#comment-icon {
+  display: none;
+}
+
+#space {
+  padding-top: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 3px;
+  margin-right: 5%;
+  margin-top: 4%;
+  background-color: #1db954;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#button {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 25%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+/* The Close Button */
+#close1 {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close1:hover,
+#close1:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modaltext {
+  margin: 1em;
+  broder-style: solid;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+#room-name {
+  margin: 0.5em 20%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  border-radius: 8px 8px 8px 8px;
+}
+
+#change {
+  border-radius: 8px 8px 8px 8px;
+  margin: 5px 30%;
+  color: white;
+  background-color: green;
+  padding: 2px;
+  text-align: center;
+}
+
+main {
+  jusityfy-align: center;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+td {
+  color: green;
+}
+
+#plus-icon {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 12%;
+  /* align-content: center; */
+  /* justify-content: center;  */
+  background-color: #282828;
+  justify-content: space-between;
+}
+
+.left {
+  display: block;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.current {
+  margin-top: 5%;
+  color: #b3b3b3;
+  font-size: 18px;
+}
+
+.voice-icon {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+}
+
+#mute-icon {
+  margin-left: 20px;
+}
+#up-icon {
+  font-size: 20px;
+}
+
+.right {
+  margin: 30px;
+}
+
+.fas {
+  font-size: 18px;
+  color: #b3b3b3;
+  margin: 1%;
+}
+
+#comment-footer-icon {
+  cursor: pointer;
+}
+
+.chat-box {
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
+  background-color: #535353;
+  /* background-color:#b3b3b3; */
+  bottom: 0;
+  position: fixed;
+  z-index: 10;
+  right: 8%;
+}
+
+.chat-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat {
+  margin-left: 8px;
+  color: white;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+#times-icon {
+  margin-left: 60%;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.box {
+  display: block;
+  margin-left: 8px;
+}
+
+.chat-message {
+  display: block;
+  width: auto;
+  height: auto;
+  overflow-wrap: break-word;
+}
+
+.chat-main {
+  /*     background-color: red; */
+  width: 200px;
+  height: 250px;
+  margin-top: 6px;
+  overflow: auto;
+}
+
+.chat-footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-input {
+  margin-top: 6px;
+  border: 20px;
+  background-color: #b3b3b3;
+  border-radius: 6px;
+  width: 190px;
+  position: relative;
+  margin-left: 6px;
+  margin-bottom: 6px;
+}
+
+.new-container {
+  display: flex;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  justify-content: flex-start;
+}
+
+.new-msg {
+  width: 60px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 10%;
+  margin-left: 10%;
+  text-align: center;
+}
+
+/* msg from self */
+.self-container { 
+  display: flex;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  justify-content: flex-start;
+  justify-content: flex-end;
+  margin-left: 8%;
+}
+
+.self-name {
+  width: 60px;
+  height: auto;
+  background-color: #b3b3b3;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.self-msg {
+  background-color: #535353;
+  margin-left: 0px;
+  width: 60px;
+  height: auto;
+  border-radius: 10%;
+  text-align: center;  
+}
+
+.input-text {
+  width: 160px;
+  height: 18px;
+  border: none;
+  margin-left: 6px;
+  resize: none;
+  background-color: #b3b3b3;
+  outline: none;
+}
+.playlist {
+  margin: 0 20%;
+}
+.table {
+  margin: 0 10%;
+}
+#arrow-icon {
+  margin-right: 2px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  color: grey;
+}
+
+/* =======================add song=========================== */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.popup-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  color: black;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* search box get idea and reference from
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_search_button */
+
+#search-title {
+  color: black;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#search-box {
+  color: black;
+  font-size: 30px;
+  border: 1px solid #1db954;
+  margin: 20px;
+  border-radius: 5px;
+}
+#search-result {
+  font-size: 30px;
+  text-align: center;
+  color: #535353;
+  padding: 10px;
+}
+
+input {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 70%;
+  outline-width: 0;
+}
+
+.close {
+  display: none;
+}
+.open {
+  display: block;
+}
+
+#search-but {
+  float: right;
+  padding: 10px;
+  background: #1db954;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+  width: 10%;
+  font-size: 15px;
+}
+
+#no-result i {
+  font-size: 40px;
+  padding: 10px;
+}
+
+#no-result div {
+  font-size: 15px;
+}
+
+#my-progress {
+  text-align: center;
+  margin: 10px 10px;
+  width: 60%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+#my-bar {
+  width: 1%;
+  height: 8px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.middle {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+#time-infor {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#progress-time {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row;
+  color: grey;
+}
+
+#duration-time {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row;
+  color: grey;
+}
+
+.add-song {
+    border-radius: 5px;
+    background: #1db954;
+    color: white;
+    padding: 6px 10px;
+    font-size: 15px;
+    float: left;
+}
+
+.add-song-table {
+  font-size: 45%;
+  text-align: left;
+}
+
+.add-song-table td {
+    color: black;
+    border-bottom: 1px solid grey;
+    width: 100%
+}
+
+#list-of-song-to-play {
+  justify-content: center;
+  width: 100%;
+  padding-left: 80px;
+}
+
+#list-of-song-to-play table {
+   border-spacing: 20px 8px;  
+}
+
+.play-music td {
+  width: 50%;
+  color: grey;
+}
+.play-music td:first-child {
+  width: 100%;
+  color: white;
+}
+
+.playlist-title {
+  font-weight: bold;
+  font-size: 25px;
+  border-spacing: 10px;
+}
+
+@media screen and (max-width: 525px) {
+  .text-container {
+    margin-top: 4%;
+    text-align: center;
+  }
+  #plus-icon {
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  #pen-icon {
+    color: #535353;
+    font-size: 20px;
+    margin-left: 4%;
+    margin-top: 4%;
+    flex-basis: 180%;
+  }
+
+  .text-header {
+    margin: 0 10%;
+    jusityfy-align: center;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+  }
+
+  .voice-icon {
+    margin-top: 10px;
+  }
+
+  .current {
+    font-size: 10px;
+  }
+  main {
+    jusityfy-align: center;
+    width: auto;
+    margin: 1em;
+  }
+  input {
+    font-size: 15px;
+    /* margin-top: 10px; */
+    /* margin-left: 10px; */
+    width: 70%;
+    outline-width: 0;
+  }
+  #overlay but {
+    float: right;
+    padding: 10px;
+    background: #1db954;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+    /* width: 10%; */
+    font-size: 10px;
+  }
+
+  #search-box {
+    color: black;
+    font-size: 20px;
+    border: 1px solid #1db954;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  .popup-box {
+    width: 90%;
+    height: 80%;
+
+    color: black;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .left {
+    display: block;
+    flex-direction: column;
+    margin: 0 2%;
+  }
+
+  #mute-icon {
+    margin-left: 10px;
+  }
+  #progress_time {
+    font-size: 10px;
+  }
+  #duration_time {
+    font-size: 10px;
+  }
+}
